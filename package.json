@@ -1,0 +1,25 @@
+{
+  "name": "branescript-syntax-highlighting",
+  "displayName": "BraneScript Syntax Highlighting",
+  "description": "Provides basic syntax highlighting for the BraneScript DSL (https://enablingpersonalizedinterventions.nl)",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bscript",
+      "aliases": ["BraneScript", "bscript"],
+      "extensions": [".bs",".bscript",".branescript"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bscript",
+      "scopeName": "source.bscript",
+      "path": "./syntaxes/bscript.tmLanguage.json"
+    }]
+  }
+}

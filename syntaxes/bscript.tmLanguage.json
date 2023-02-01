@@ -1,0 +1,95 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BraneScript",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#builtins"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.bscript",
+					"match": "//.*\n"
+				},
+				{
+					"name": "comment.line.slash-star.bscript",
+					"match": "/\\*[^*]*\\*+(?:[^/*][^*]*\\*+)*/"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.bscript",
+					"match": "\\b(return|if|else|for|while|on|parallel)\\b"
+				},
+				{
+					"name": "keyword.other.bscript",
+					"match": "\\b(import|new)\\b"
+				},
+				{
+					"name": "storage.type.bscript",
+					"match": "\\b(let|func|class)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.bscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.bscript",
+					"match": "\\b-?([0-9]*\\.)?[0-9]+\\b"
+				},
+				{
+					"name": "constant.language.bscript",
+					"match": "\\b(true|false|null)\\b"
+				}
+			]
+		},
+		"builtins": {
+			"patterns": [
+				{
+					"name": "support.function.bscript",
+					"match": "\\b(print|println|len|commit_result)\\b"
+				},
+				{
+					"name": "support.class.bscript",
+					"match": "\\b(Data|IntermediateResult)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.bscript",
+					"match": "\\b(self)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.bscript"
+}
