@@ -2,8 +2,7 @@
 
 All notable changes to the "branescript-syntax-highlighting" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+This project uses [semantic versioning](https://semver.org), and we indicate breaking changes when they occur using [**breaking**].
 
-## [Unreleased]
-
+## [1.0.0] - 2023-04-17
 - Initial release

@@ -16,6 +16,9 @@
 		},
 		{
 			"include": "#builtins"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
@@ -87,6 +90,10 @@
 				{
 					"name": "variable.language.bscript",
 					"match": "\\b(self)\\b"
+				},
+				{
+					"name": "variable.name.bscript",
+					"match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
 				}
 			]
 		}

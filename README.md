@@ -1,65 +1,89 @@
-# branescript-syntax-highlighting README
+# BraneScript Syntax Highlighting
 
-This is the README for your extension "branescript-syntax-highlighting". After writing up a brief description, we recommend including the following sections.
+This repository contains code that implements syntax highlighting for the BraneScript domain-specific language, part of the [EPI Project](https://github.com/epi-project). Currently, the only system implementing it is [BRANE](https://github.com/epi-project/brane), which is a workflow execution system for use in the medical domain. It, and BraneScript, are designed as part of the [Enabling Personalized Interventions project](https://enablingpersonalizedinterventions.nl).
+
+BraneScript itself is a script-like language with which one can define workflows. These workflows are high-level control flow specifications of tasks, or functions, which are bunled in packages within the BRANE ecosystem. To support this, the language has the familiar basic concepts (variables, classes, functions, if-statements, while-loop, for-loops), as well as some that are specialized towards workflow execution (parallel-statements, builtin functions and classes).
+
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extension adds basic syntax highlighting for keywords, variables, comments and constants. In addition, it provides limited additional information to the editor such that it can comment large blocks, provide auto-matching for brackets and quotes and properly highlights them. However, this extension does not add a language server, so any context-dependent highlighting or suggestions are not provided at this time.
 
-For example if there is an image subfolder under your extension project workspace:
+![Example syntax hightlighting](img/example.png)  
+_Example of the BraneScript syntax highlighter using the [Panda Theme](https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda). The code is a snippet from [this repository](https://github.com/epi-project/brane-disaster-tweets-example)._
 
-\!\[feature X\]\(images/feature-x.png\)
+In the future, adding a language server would be optimal. Moreover, syntax highlighting for BraneScript's sister language -Bakery- is required too.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Installation
+To install the extension in your local setup, you can either download the extension via the marketplace (recommended), download the package VSIX file from the repository or compile the VSIX file yourself.
 
-## Extension Settings
+### Marketplace
+To download the extension from the marketplace, simply go the `Extensions` tab in Visual Studio Code.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Then, search for "eflint" and click on `Install` to install the latest version.
 
-For example:
+![Screenshot to install from the marketplace](img/download.png)  
+_Menu to install the extension from the marketplace._
 
-This extension contributes the following settings:
+This method is recommended because you can also automatically receive updates.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
-## Known Issues
+### Downloading
+You can also choose to download a specific version of the extension from its [repository](https://github.com/epi-project/brane-syntax-highlighting/releases). Simply select the desired release, and then download the `.vsix` file to someplace on your machine (where does not matter, as long as you can find it).
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Then, you can install the extension by going to the `Extensions` tab in Visual Studio Code and then clicing the three-dot menu at the top of the middle panel. From there, you can select `Install from VSIX...`.
+
+![Screenshot to install VSIX file](img/showcase_vsix.png)  
+_Menu to install a local .vsix file._
+
+Navigate to the `.vsix` file you downloaded, and click `Install`.
+
+![Screenshot to browse to a VSIX file](img/install_vsix.png)  
+_Browsing to a .vsix file on Windows._
+
+The extension should be installed once this operation completes.
+
+
+### Compilation
+Before you begin, you should first install [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your machine. Once done, you can install the [`vsce`](https://github.com/microsoft/vscode-vsce) package we will use to build the extension:
+```bash
+npm install -g vsce
+```
+
+Then you can clone the [repository](https://github.com/epi-project/brane-syntax-highlighting):
+```bash
+git clone https://github.com/epi-project/brane-syntax-highlighting
+cd ./brane-syntax-highlighting
+```
+
+With `vsce` installed and the repository cloned, you can compile the extension by running:
+```bash
+vsce package
+```
+
+This will generate the package `.vsix` file for us.
+
+To install the extension, you can follow the steps taken for [downloading](#downloading) the extension, except that you already have a `.vsix` file ready (so no need to download it from the repository).
+
+
+## Usage
+To use the extension, simply create a new file.
+
+![Screenshot to create a new file](img/create_file.png)  
+_Steps to create a new file._
+
+If you give the new file a `.bs`, `.bscript` or `.branescript` extension, the extension should be enabled on this file automatically. If not, you can manually select it in the lower-right corner of the window.
+
+![Screenshot to select the eFLINT language 1](img/select_language1.png)  
+_The button to open the language selection menu._
+
+![Screenshot to select the eFLINT language 2](img/select_language2.png)  
+_The menu to select the BraneScript language for this file._
 
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
+A brief overview of each release is given here. For more details, check the [CHANGELOG.md](https://gitlab.com/eflint/tools/syntax-highlighting-vscode/-/blob/main/CHANGELOG.md) file.
 
 ### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release of the extension.

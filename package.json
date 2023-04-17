@@ -14,7 +14,11 @@
       "id": "bscript",
       "aliases": ["BraneScript", "bscript"],
       "extensions": [".bs",".bscript",".branescript"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/bscript-64x64.png",
+        "dark": "./icons/bscript-64x64.png"
+      }
     }],
     "grammars": [{
       "language": "bscript",
