@@ -87,5 +87,8 @@ You can do the same trick on existing files to apply BraneScript's syntax highli
 ## Release Notes
 A brief overview of each release is given here. For more details, check the [CHANGELOG.md](https://gitlab.com/eflint/tools/syntax-highlighting-vscode/-/blob/main/CHANGELOG.md) file.
 
-### 1.0.0
+### 0.1.1
+Added extension logo, fixed README image.
+
+### 0.1.0
 Initial release of the extension.
