@@ -4,5 +4,5 @@ All notable changes to the "branescript-syntax-highlighting" extension will be d
 
 This project uses [semantic versioning](https://semver.org), and we indicate breaking changes when they occur using [**breaking**].
 
-## [1.0.0] - 2023-04-17
+## [1.0.0] - 2023-05-11
 - Initial release

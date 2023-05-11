@@ -2,7 +2,7 @@
 
 This repository contains code that implements syntax highlighting for the BraneScript domain-specific language, part of the [EPI Project](https://github.com/epi-project). Currently, the only system implementing it is [BRANE](https://github.com/epi-project/brane), which is a workflow execution system for use in the medical domain. It, and BraneScript, are designed as part of the [Enabling Personalized Interventions project](https://enablingpersonalizedinterventions.nl).
 
-BraneScript itself is a script-like language with which one can define workflows. These workflows are high-level control flow specifications of tasks, or functions, which are bunled in packages within the BRANE ecosystem. To support this, the language has the familiar basic concepts (variables, classes, functions, if-statements, while-loop, for-loops), as well as some that are specialized towards workflow execution (parallel-statements, builtin functions and classes).
+BraneScript itself is a script-like language with which one can define workflows. These workflows are high-level control flow specifications of tasks, or functions, which are bunled in packages within the BRANE ecosystem. To support this, the language has the familiar basic concepts (variables, classes, functions, if-statements, while-loop, for-loops), as well as some that are specialized towards workflow execution (parallel-statements, package imports, on-structs).
 
 
 ## Features
@@ -17,15 +17,15 @@ In the future, adding a language server would be optimal. Moreover, syntax highl
 
 
 ## Installation
-To install the extension in your local setup, you can either download the extension via the marketplace (recommended), download the package VSIX file from the repository or compile the VSIX file yourself.
+To install the extension in your local setup, you can either download the extension via the marketplace (recommended), download the package VSIX file from the repository, or compile the VSIX file yourself.
 
 ### Marketplace
 To download the extension from the marketplace, simply go the `Extensions` tab in Visual Studio Code.
 
-Then, search for "eflint" and click on `Install` to install the latest version.
+Then, search for "branescript" and click on `Install` to install the latest version.
 
-![Screenshot to install from the marketplace](img/download.png)  
-_Menu to install the extension from the marketplace._
+![Screenshot to install the eFLINT extension from the marketplace](img/download.png)  
+_Menu to install another extension from the marketplace, for illustration purposes._
 
 This method is recommended because you can also automatically receive updates.
 
@@ -41,7 +41,7 @@ _Menu to install a local .vsix file._
 Navigate to the `.vsix` file you downloaded, and click `Install`.
 
 ![Screenshot to browse to a VSIX file](img/install_vsix.png)  
-_Browsing to a .vsix file on Windows._
+_Browsing to a .vsix file on Linux._
 
 The extension should be installed once this operation completes.
 
@@ -49,7 +49,7 @@ The extension should be installed once this operation completes.
 ### Compilation
 Before you begin, you should first install [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your machine. Once done, you can install the [`vsce`](https://github.com/microsoft/vscode-vsce) package we will use to build the extension:
 ```bash
-npm install -g vsce
+sudo npm install -g vsce
 ```
 
 Then you can clone the [repository](https://github.com/epi-project/brane-syntax-highlighting):
@@ -81,6 +81,8 @@ _The button to open the language selection menu._
 
 ![Screenshot to select the eFLINT language 2](img/select_language2.png)  
 _The menu to select the BraneScript language for this file._
+
+You can do the same trick on existing files to apply BraneScript's syntax highlighting.
 
 ## Release Notes
 A brief overview of each release is given here. For more details, check the [CHANGELOG.md](https://gitlab.com/eflint/tools/syntax-highlighting-vscode/-/blob/main/CHANGELOG.md) file.
