@@ -3,10 +3,11 @@
   "displayName": "BraneScript Syntax Highlighting",
   "description": "Provides basic syntax highlighting for the BraneScript DSL (https://enablingpersonalizedinterventions.nl)",
   "publisher": "epi-project",
+  "icon": "./icons/bscript-64x64.png",
   "repository": {
     "url": "https://github.com/epi-project/branescript-syntax-highlighting"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.74.0"
   },

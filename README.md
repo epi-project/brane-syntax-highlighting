@@ -25,7 +25,7 @@ To download the extension from the marketplace, simply go the `Extensions` tab i
 Then, search for "branescript" and click on `Install` to install the latest version.
 
 ![Screenshot to install the eFLINT extension from the marketplace](img/download.png)  
-_Menu to install another extension from the marketplace, for illustration purposes._
+_Selecting the BraneScript extension from the Extensions tab._
 
 This method is recommended because you can also automatically receive updates.
 
